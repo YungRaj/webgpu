@@ -101,7 +101,7 @@ const SampleLayout: React.FunctionComponent<
     if (currentHash) {
       setActiveHash(currentHash[1]);
     } else {
-      setActiveHash(sources[0].name);
+      setActiveHash('');
     }
 
     if (gui && guiParentRef.current) {
@@ -158,13 +158,6 @@ const SampleLayout: React.FunctionComponent<
       </Head>
       <div>
         <h1>{props.name}</h1>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href={`https://github.com/${process.env.REPOSITORY_NAME}/tree/main/${props.filename}`}
-        >
-          See it on Github!
-        </a>
         <p>{props.description}</p>
         {error ? (
           <>

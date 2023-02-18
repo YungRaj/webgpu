@@ -230,32 +230,8 @@ const init: SampleInit = async ({ canvas, pageState }) => {
 
 const TexturedCube: () => JSX.Element = () =>
   makeSample({
-    name: 'Textured Cube',
-    description:
-      "This example uses the previous frame's rendering result \
-       as the source texture for the next frame.",
     init,
-    sources: [
-      {
-        name: __filename.substring(__dirname.length + 1),
-        contents: __SOURCE__,
-      },
-      {
-        name: '../../shaders/basic.vert.wgsl',
-        contents: basicVertWGSL,
-        editable: true,
-      },
-      {
-        name: './sampleSelf.frag.wgsl',
-        contents: sampleSelfWGSL,
-        editable: true,
-      },
-      {
-        name: '../../meshes/cube.ts',
-        // eslint-disable-next-line @typescript-eslint/no-var-requires
-        contents: require('!!raw-loader!../../meshes/cube.ts').default,
-      },
-    ],
+    sources: [],
     filename: __filename,
   });
 
